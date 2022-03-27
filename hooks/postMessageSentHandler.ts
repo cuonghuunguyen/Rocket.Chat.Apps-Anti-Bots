@@ -16,6 +16,11 @@ class PostMessageSentHandler {
 
 	public async run(): Promise<void> {
 		const { customFields, room, sender } = this.message;
+
+		if (![RoomType.DIRECT_MESSAGE, RoomType.CHANNEL].includes(room.type)) {
+			return;
+		}
+
 		if (customFields?.blocked) {
 			const warningMessage = await this.read
 				.getEnvironmentReader()
