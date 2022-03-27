@@ -73,10 +73,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@rocket.chat/apps-engine@1.31.0":
-  version "1.31.0"
-  resolved "https://artifacts.mgm-tp.com:443/artifactory/api/npm/npm-repos/@rocket.chat/apps-engine/-/apps-engine-1.31.0.tgz#03542e5419337dae14f93b848606adb694c2379e"
-  integrity sha1-A1QuVBkzfa4U+TuEhgattpTCN54=
+"@rocket.chat/apps-engine@1.28.1":
+  version "1.28.1"
+  resolved "https://artifacts.mgm-tp.com:443/artifactory/api/npm/npm-repos/@rocket.chat/apps-engine/-/apps-engine-1.28.1.tgz#4898a41dc84ecf934791f7b0240b247ac30000b9"
+  integrity sha1-SJikHchOz5NHkfewJAskesMAALk=
   dependencies:
     adm-zip "^0.4.9"
     cryptiles "^4.1.3"

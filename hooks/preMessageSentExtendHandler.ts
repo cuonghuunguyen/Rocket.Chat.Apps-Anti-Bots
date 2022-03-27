@@ -37,9 +37,10 @@ class PreMessageSentExtendHandler {
 	}
 
 	blockMessage() {
-		// @ts-ignore Hide the message
-		// As I told you, we need this https://github.com/RocketChat/Rocket.Chat.Apps-engine/issues/352 to send a warning message :D
-		this.extend.msg._unmappedProperties_.t = "hidden";
+		// Hide the message. As I told you, we need this https://github.com/RocketChat/Rocket.Chat.Apps-engine/issues/352 to send a warning message :D
+		(this.extend as any).msg._unmappedProperties_ = {
+			t: "hidden"
+		};
 
 		this.extend.addCustomField("blocked", true);
 	}

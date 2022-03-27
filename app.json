@@ -1,7 +1,7 @@
 {
     "id": "e8f0e556-590d-4638-9959-0295e57f5511",
     "version": "1.0.0",
-    "requiredApiVersion": "^1.31.0",
+    "requiredApiVersion": "^1.28.1",
     "iconFile": "icon.png",
     "author": {
         "name": "Cuong Huu Nguyen",
