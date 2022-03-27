@@ -1,0 +1,15 @@
+{
+    "id": "e8f0e556-590d-4638-9959-0295e57f5511",
+    "version": "0.0.1",
+    "requiredApiVersion": "^1.4.0",
+    "iconFile": "icon.png",
+    "author": {
+        "name": "Cuong Huu Nguyen",
+        "homepage": "\u0016https://github.com/cuonghuunguyen",
+        "support": "https://github.com/cuonghuunguyen"
+    },
+    "name": "Anti Bots",
+    "nameSlug": "anti-bots",
+    "classFile": "AntiBotsApp.ts",
+    "description": "Solution for anti bots on public server"
+}
