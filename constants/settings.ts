@@ -12,7 +12,8 @@ export const settings: ISetting[] = [
 		required: false,
 		multiline: true,
 		packageValue: "",
-		i18nLabel: "additional_block_words_label",
+		i18nLabel: "Additional blocked words",
+		i18nDescription: "Additional blocked words in CSV format",
 		type: SettingType.STRING
 	},
 	{
@@ -26,8 +27,11 @@ If you have your question, greet in first line, and ask your question in second 
 That annoying single line nonsense greetings from spambots are awful thing and makes that server less useful.
 Please don't help bots to spam that server totally.
 Thank you!`,
-		i18nLabel: "warning_message_label",
-		i18nDescription: "warning_message_desc",
-		type: SettingType.STRING
+		i18nLabel: "Warning message",
+		i18nDescription: "Warning message which will be sent to spammers. Can be in Markdown format.",
+		/**
+		 * Workaround because I cannot use multiline input
+		 */
+		type: "code" as SettingType
 	}
 ];

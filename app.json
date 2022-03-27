@@ -1,12 +1,12 @@
 {
     "id": "e8f0e556-590d-4638-9959-0295e57f5511",
-    "version": "0.0.1",
-    "requiredApiVersion": "1.31.0",
+    "version": "1.0.0",
+    "requiredApiVersion": "^1.28.1",
     "iconFile": "icon.png",
     "author": {
         "name": "Cuong Huu Nguyen",
-        "homepage": "\u0016https://github.com/cuonghuunguyen",
-        "support": "https://github.com/cuonghuunguyen"
+        "homepage": "\u0016https://github.com/cuonghuunguyen/Rocket.Chat.Apps-Anti-Bots",
+        "support": "https://github.com/cuonghuunguyen/Rocket.Chat.Apps-Anti-Bots/issues"
     },
     "name": "Anti Bots",
     "nameSlug": "anti-bots",
