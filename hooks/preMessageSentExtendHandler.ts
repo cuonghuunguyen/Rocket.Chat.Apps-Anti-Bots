@@ -9,8 +9,9 @@ class PreMessageSentExtendHandler {
 	public async run(): Promise<IMessage> {
 		const { text, sender } = this.message;
 		const settingsReader = this.read.getEnvironmentReader().getSettings();
+
 		if (sender.customFields?.blocked) {
-			this.blockMessage();
+			return this.blockMessage();
 		}
 
 		if (text) {
@@ -30,19 +31,20 @@ class PreMessageSentExtendHandler {
 				return this.extend.getMessage();
 			}
 
-			this.blockMessage();
+			return this.blockMessage();
 		}
 
 		return this.extend.getMessage();
 	}
 
-	blockMessage() {
+	blockMessage(): IMessage {
 		// Hide the message. As I told you, we need this https://github.com/RocketChat/Rocket.Chat.Apps-engine/issues/352 to send a warning message :D
 		(this.extend as any).msg._unmappedProperties_ = {
 			t: "hidden"
 		};
 
 		this.extend.addCustomField("blocked", true);
+		return this.extend.getMessage();
 	}
 }
 

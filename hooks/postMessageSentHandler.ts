@@ -45,7 +45,7 @@ class PostMessageSentHandler {
 				directRoom = (await this.read.getRoomReader().getById(roomId)) as IRoom;
 			}
 
-			if (!this.message.sender.customFields?.blocked) {
+			if (!sender.customFields?.blocked) {
 				const warningMessageBuilder = creator
 					.startMessage()
 					.setSender(appUser)

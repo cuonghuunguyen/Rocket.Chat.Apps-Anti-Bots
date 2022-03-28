@@ -7,7 +7,7 @@ export const buildWarningMessage = (modify: IModify, warningMessage: string, dec
 	if (declined) {
 		block.addSectionBlock({
 			text: block.newMarkdownTextObject(
-				"**:warning: You won't be able to send messages util you accept the term**"
+				"**:warning: You won't be able to send messages until you accept the term**"
 			)
 		});
 	}
