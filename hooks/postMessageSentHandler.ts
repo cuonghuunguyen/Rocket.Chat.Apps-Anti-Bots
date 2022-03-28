@@ -66,6 +66,7 @@ class PostMessageSentHandler {
 				.setRoom(room);
 
 			await notifier.notifyUser(sender, blockMessage.getMessage());
+			// TODO Delete the message and maybe delete direct room when https://github.com/RocketChat/Rocket.Chat.Apps-engine/pull/483 is merged
 		}
 	}
 }

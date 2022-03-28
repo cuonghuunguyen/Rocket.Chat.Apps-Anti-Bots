@@ -10,6 +10,7 @@ class PreMessageSentExtendHandler {
 		const { text, sender } = this.message;
 		const settingsReader = this.read.getEnvironmentReader().getSettings();
 
+		// If the sender is already blocked, we will block this message also.
 		if (sender.customFields?.blocked) {
 			return this.blockMessage();
 		}
@@ -37,8 +38,18 @@ class PreMessageSentExtendHandler {
 		return this.extend.getMessage();
 	}
 
+	/**
+	 * The reason why I have to hide it instead of block it entirely in `preMessageSentPrevent` is that
+	 * we need to do some more stuffs like block the user and block send messages.
+	 * What I do here:
+	 * * Mark this message as blocked for future detection
+	 * * Add the type hidden so that the message won't show up
+	 * @see https://github.com/RocketChat/Rocket.Chat.Apps-engine/issues/352 to send a warning message :D
+	 */
 	blockMessage(): IMessage {
-		// Hide the message. As I told you, we need this https://github.com/RocketChat/Rocket.Chat.Apps-engine/issues/352 to send a warning message :D
+		/**
+		 * We cannot change type of the message, this is a workaround
+		 */
 		(this.extend as any).msg._unmappedProperties_ = {
 			t: "hidden"
 		};
